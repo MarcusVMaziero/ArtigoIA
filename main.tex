@@ -1,0 +1,94 @@
+\documentclass[a4paper, 12 pt, conference]{ieeeconf}  % 
+\IEEEoverridecommandlockouts                              % This command is only
+% needed if you want to
+% use the \thanks command
+
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+% Pacote de acentuação
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+
+\usepackage[]{todonotes} % adicionar parâmetro [disable] para ocultar os comentários
+\usepackage{xspace} % usado nos comentários
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+}
+
+\newcounter{todocounter}
+\setlength{\marginparwidth}{2cm}
+\reversemarginpar
+\newcommand{\nota}[1]{\xspace\stepcounter{todocounter}\todo[fancyline]{\thetodocounter: #1}}
+\newcommand{\notain}[2]{\stepcounter{todocounter}\todo[inline]{\thetodocounter: (#1) #2}}
+
+\title{\LARGE \bf
+Classificação de emoções por meio de expressões faciais em sala de aula
+}
+
+\author{Marcus V. S. Maziero$^{1}$e Paulo R. K. Nakaima$^{2}$
+\thanks{$^{1}$Marcus V. S. Maziero e $^{2}$Paulo R. K. Nakaima estão vinculados à Universidade Tecnológica Federal do Paraná, Av. Alberto Carazzai, 1640, Cornélio Procópio, Brasil. 
+        {\tt\small marcus.maziero$@$outlook.com, nakaima$@$alunos.utfpr.edu.br}}%
+}
+
+
+\begin{document}
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+Procura-se neste trabalho realizar breve revisão bibliográfica sobre problema de reconhecimento de expressões faciais em sala de aula para melhorar a qualidade de ensino. Na sequência será realizado um laboratório para demonstrar a aplicação de técnicas de aprendizado de máquina para a solução do problema. Busca-se abordar de forma introdutória e simplificada o tema para fundamentar trabalhos futuros.
+\end{abstract}
+
+\begin{keywords}
+Inteligencia Artificial, Emoções, Imagens, Machine Learning.
+\end{keywords}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUÇÃO}
+\input{introducao}
+
+\section{CONTEXTO}
+\input{contexto}
+
+\section{OBJETIVOS}
+\input{objetivos}
+
+\section{TRABALHOS RELACIONADOS}
+\input{relacionados}
+
+
+\section{METODOLOGIA}
+\input{metodologia}
+
+\section{Resultados}
+\input{resultados}
+
+\section{CONCLUSÃO E TRABALHOS FUTUROS}
+\input{conclusao}
+
+
+\bibliography{referencias}
+\bibliographystyle{plain}
+
+\end{document}
